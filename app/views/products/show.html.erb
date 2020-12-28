@@ -6,8 +6,8 @@
   <%= @product.name %>
 </p>
 
-<% @product.image.each do |mig| %>
-  <%= image_tag mig.url if @product.image? %>
+<% @product.images.each do |mig| %>
+  <%= image_tag mig.url if @product.images.any? %>
 <% end %>
 
 
