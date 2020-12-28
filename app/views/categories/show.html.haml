@@ -8,4 +8,14 @@
   = @category.desc
 
 
+%hr
+%h2
+  Products Under #{@category.name}
+
+%ol
+- @category.products.each do | product |
+  %h4= link_to product.name, product_path(product)
+  %p= product.desc
+
+
 = link_to 'Back', categories_path

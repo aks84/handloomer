@@ -2,7 +2,7 @@
 	%h2
 		HANDLOOMER
 
-%nav.main_nav	
+%nav.main_nav
 	%ul
 		%li
 			= link_to('Home', root_path)
@@ -12,7 +12,7 @@
 			= link_to('Products', products_path)
 		%li
 			= link_to('Admin', admin_index_path)
-		
+
 
 
 %nav.sessions_nav
@@ -28,7 +28,9 @@
 			%li
 				= link_to "Sign up", new_user_registration_path
 
-%p.notice
-	= notice
-%p.alert
-	= alert
+- if flash[:notice]
+	%p.notice
+		= notice
+- else
+	%p.alert
+		= alert
