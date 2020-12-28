@@ -4,7 +4,7 @@
   %b Name:
   = @product.name
 
-- @product.image.each do |mig|
+- @product.images.each do |mig|
   =image_tag mig.url if @product.image?
 
 %p
