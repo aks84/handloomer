@@ -1,0 +1,20 @@
+%h1 Listing categories
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Desc
+      %th
+     
+
+  %tbody
+    - @categories.each do |category|
+      %tr
+        %td= category.name
+        %td= category.desc
+        %td= link_to 'Show', category
+        
+%br
+
+

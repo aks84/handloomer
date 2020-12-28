@@ -1,0 +1,19 @@
+!!! 
+%html
+    %head
+        %title Handloomer Admin
+        = csrf_meta_tags 
+        = csp_meta_tag
+
+        = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+        = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
+
+    %body
+        %header
+            =render 'shared/header'
+
+        %main
+            = yield 
+
+        %footer

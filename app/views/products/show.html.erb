@@ -1,0 +1,42 @@
+<p id="notice">
+  <%= notice %>
+</p>
+<p>
+  <b>Name:</b>
+  <%= @product.name %>
+</p>
+
+<% @product.image.each do |mig|%>
+  <%= image_tag mig.url %>
+<% end %>
+
+
+<p>
+  <b>Price:</b>
+  <%= @product.price %>
+</p>
+<p>
+  <b>Origin:</b>
+  <%= @product.origin %>
+</p>
+<p>
+  <b>Available:</b>
+  <%= @product.available %>
+</p>
+<p>
+  <b>Season:</b>
+  <%= @product.season %>
+</p>
+<p>
+  <b>Thread type:</b>
+  <%= @product.thread_type %>
+</p>
+<p>
+  <b>Desc:</b>
+  <%= @product.desc %>
+</p>
+<p>
+  <b>Category:</b>
+  <%= @product.category.name %>
+</p>
+<%= link_to 'Back', products_path %>

@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  price: 9.99
+  origin: MyString
+  available: false
+  season: MyString
+  thread_type: MyString
+  desc: MyText
+  category: one
+
+two:
+  name: MyString
+  price: 9.99
+  origin: MyString
+  available: false
+  season: MyString
+  thread_type: MyString
+  desc: MyText
+  category: two

@@ -1,0 +1,35 @@
+%h1 Listing products
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Price
+      %th Origin
+      %th Available
+      %th Season
+      %th Thread type
+      %th Desc
+      %th Category
+      %th
+      %th
+      %th
+
+  %tbody
+    - @products.each do |product|
+      %tr
+        %td= product.name
+        %td= product.price
+        %td= product.origin
+        %td= product.available
+        %td= product.season
+        %td= product.thread_type
+        %td= product.desc
+        %td= product.category.name
+        %td= link_to 'Show', admin_product_path(product), target: :_blank
+        %td= link_to 'Edit', edit_admin_product_path(product), target: :_blank
+        %td= link_to 'Destroy', admin_product_path(product), method: :delete, data: { confirm: 'Are you sure?' }, target: :_blank
+
+%br
+
+= link_to 'New Product', new_admin_product_path, target: :_blank

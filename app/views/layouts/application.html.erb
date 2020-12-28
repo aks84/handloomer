@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Handloomer</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+       <header>
+         <%= render 'shared/header' %>
+       </header>
+       <main>
+      <article>
+          <%= yield %>
+      </article>
+      <aside>
+        <%= render 'shared/sidebar' %>
+      </aside>
+      </main>
+      <footer>
+        <%= render 'shared/footer' %>
+      </footer>
+  </body>
+</html>
