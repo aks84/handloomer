@@ -13,6 +13,7 @@ gem 'turbolinks', '~> 5'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'haml-rails', '~> 2.0', '>= 2.0.1'
 gem 'carrierwave', '~> 2.1'
+gem 'mini_magick', '~> 4.11'
 gem 'faker'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'bootsnap', '>= 1.4.2', require: false

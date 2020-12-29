@@ -1,20 +1,11 @@
-%h1 Listing categories
+%h1 Product Categories
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Desc
-      %th
-     
+- @categories.each do |category|
+  .category_list
+    %h2= link_to category.name, category
+    %p= category.desc
 
-  %tbody
-    - @categories.each do |category|
-      %tr
-        %td= category.name
-        %td= category.desc
-        %td= link_to 'Show', category
-        
-%br
+
+
 
 

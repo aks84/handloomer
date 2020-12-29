@@ -1,29 +1,12 @@
 %h1 Listing products
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Price
-      %th Origin
-      %th Available
-      %th Season
-      %th Thread type
-      %th Desc
-      %th Category
-      %th
-     
 
-  %tbody
-    - @products.each do |product|
-      %tr
-        %td= product.name
-        %td= product.price
-        %td= product.origin
-        %td= product.available
-        %td= product.season
-        %td= product.thread_type
-        %td= product.desc
-        %td= product.category.name
-        %td= link_to 'Show', product
-     
+- @products.each do |product|
+  .product_list
+    %h2= link_to product.name, product
+    %small.cat
+      Category - #{product.category.name}
+    %p= product.desc
+    .post_imgs
+      - product.images_urls(:card).each do |image|
+        = image_tag image

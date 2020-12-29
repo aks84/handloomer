@@ -4,8 +4,8 @@
   %b Name:
   = @product.name
 
-- @product.images.each do |mig|
-  = image_tag mig.url if @product.images.any?
+- @product.images_urls(:card).each do |mig|
+  = image_tag mig if @product.images.any?
 
 %p
   %b Price:

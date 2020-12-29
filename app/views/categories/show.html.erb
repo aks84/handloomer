@@ -1,0 +1,28 @@
+<p id="notice">
+  <%= notice %>
+</p>
+<p>
+  <b>Name:</b>
+  <%= @category.name %>
+</p>
+<p>
+  <b>Desc:</b>
+  <%= @category.desc %>
+</p>
+<hr/>
+<h2>
+  Products Under <%= @category.name %>
+</h2>
+
+<div class="category_products">
+	<% @category.products.each do | product | %>
+  <h4>
+    <%= link_to product.name, product_path(product) %>
+  </h4>
+  <p>
+    <%= product.desc %>
+  </p>
+<% end %>
+</div>
+
+<%= link_to 'All Categories', categories_path %>

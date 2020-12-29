@@ -1,13 +1,14 @@
+<article>
 
-<p>
-  <b>Name:</b>
-  <%= @product.name %>
-</p>
 
-<% @product.images.each do |mig| %>
-  <%= image_tag mig.url if @product.images.any? %>
+<h1> <%= @product.name %> </h1>
+
+<div class="post_imgs">
+  <% @product.images_urls(:thumb).each do |mig| %>
+  <%= image_tag mig if @product.images.any? %>
 <% end %>
-
+</div>
+<p><%= @product.desc %></p>
 
 <p>
   <b>Price:</b>
@@ -30,11 +31,8 @@
   <%= @product.thread_type %>
 </p>
 <p>
-  <b>Desc:</b>
-  <%= @product.desc %>
-</p>
-<p>
   <b>Category:</b>
   <%= @product.category.name %>
 </p>
-<%= link_to 'Back', products_path %>
+</article>
+<%= link_to 'All Products', products_path %>

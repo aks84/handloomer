@@ -10,3 +10,8 @@
 = link_to 'Edit', edit_admin_category_path(@category)
 \|
 = link_to 'Back', admin_categories_path
+
+
+%h3 Products under #{@category.name}
+- @category.products.each do |product|
+  %li= link_to product.name, admin_product_path(product), target: :_blank
