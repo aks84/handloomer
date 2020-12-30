@@ -18,20 +18,24 @@ body{
 	width: 65%;
 	margin-right: auto;
 	margin-left: auto;
+	font-family: sans-serif;
 }
 
 article{
 	.product_list {
-	    width: 30%;
+		text-align: center;
+	    width: 100/3;
 	    border: 1px solid silver;
 	    border-radius: 5px;
 	    padding: 5px;
 	   	margin: .5%;
 	    float: left;
 	    max-height: 400px;
-	    img{
 
+	    img{
+	    	border-radius: 4px;
 	    }
+
 	    a{
 	    	text-decoration: none;
 	    	&:hover,
