@@ -5,4 +5,6 @@ class AdminController < ApplicationController
     @products = Product.all
     @categories = Category.all
   end
+
+
 end

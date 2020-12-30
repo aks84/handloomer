@@ -17,7 +17,7 @@
         %main
 
             - if user_signed_in?
-                = yield
+                = yield if current_user.admin? || current_user.seller?
             - else
                 %h3 You must be logged in as admin
                 %li= link_to "Sign in", new_user_session_path

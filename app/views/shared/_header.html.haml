@@ -13,7 +13,8 @@
 		%li
 			- if current_user.present? && current_user.admin?
 				= link_to('Admin', admin_index_path)
-
+			- if current_user.present? && current_user.seller?
+				= link_to('Seller', admin_index_path)
 
 
 %nav.sessions_nav
