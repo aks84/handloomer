@@ -1,5 +1,5 @@
 %h1 Admin#index
-%p Manage Your Products
+%h3 Create New Product/Category
 
 %ul
     %li
@@ -8,21 +8,30 @@
         = link_to('New Product', new_admin_product_path, target: :_blank)
 
 
-%h3 Categories
-%ol
-    - @categories.each do | category |
-        %li=category.name
-        = link_to 'Show', admin_category_path(category), target: :_blank
-        = link_to 'Edit', edit_admin_category_path(category), target: :_blank
-        = link_to 'Destroy', admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, target: :_blank
-        %br/
-        %br/
+.products
+    %h3 Manage Products
+    %ol
+        - @products.each do |product|
+            %li=product.name
+            = link_to 'Show', admin_product_path(product), target: :_blank
+            = link_to 'Edit', edit_admin_product_path(product), target: :_blank
+            = link_to 'Destroy', admin_product_path(product), method: :delete, data: { confirm: 'Are you sure?' }, target: :_blank
+            %br
+            %br
 
-%h3 Products
-%ol
-    - @products.each do |product|
-        %li=product.name
-        = link_to 'Show', admin_product_path(product), target: :_blank
-        = link_to 'Edit', edit_admin_product_path(product), target: :_blank
-        = link_to 'Destroy', admin_product_path(product), method: :delete, data: { confirm: 'Are you sure?' }, target: :_blank
-  
+
+
+.categories
+
+    %h3 Manage Categories
+    %ol
+        - @categories.each do | category |
+            %li=category.name
+            = link_to 'Show', admin_category_path(category), target: :_blank
+            = link_to 'Edit', edit_admin_category_path(category), target: :_blank
+            = link_to 'Destroy', admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, target: :_blank
+            %br
+            %br
+
+
+

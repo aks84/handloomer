@@ -1,2 +1,21 @@
-%h1 Home#welcome
-%p Find me in app/views/home/welcome.html.haml
+.welcome
+  %h1 Welcome!
+  %p We help you reach remote handloom artists across India. Also handloomers find their clients from around the world.
+
+
+=image_tag("handloom.jpeg", class: 'welcome-img')
+
+
+%h3 Popular Products
+
+.popular_list
+  - @products.each do |product|
+    .popular_products
+      %h2= link_to product.name, product
+      .post_imgs
+        = image_tag product.images_urls(:card)[0]
+      %small.cat
+        Category - #{product.category.name}
+      %p= truncate(product.desc, length: 75)
+
+      = link_to "- Learn More -", product, class: "contact-btn"
