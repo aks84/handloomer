@@ -1,17 +1,17 @@
 <p id="notice">
   <%= notice %>
 </p>
+<h2>
+
+  <%= @category.name %> : <mark>Category</mark>
+</h2>
 <p>
-  <b>Name:</b>
-  <%= @category.name %>
-</p>
-<p>
-  <b>Desc:</b>
+
   <%= @category.desc %>
 </p>
 <hr/>
 <h2>
-  Products Under <%= @category.name %>
+  Products Under <mark><%= @category.name %></mark>
 </h2>
 
 <div class="category_products">

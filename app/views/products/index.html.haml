@@ -1,5 +1,8 @@
 %h1 Listing products
 
+.sort_products
+  %p Sort Products
+  = select_tag :"category", options_for_select(Category.all.collect{|c| [c.name, c.id]})
 
 - @products.each do |product|
   .product_list

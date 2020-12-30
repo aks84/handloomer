@@ -39,6 +39,9 @@ header{
     }
 }
 
+
+
+
 nav.main_nav {
     width: 50%;
     float:left;
@@ -63,6 +66,17 @@ nav>ul>li{
 main{
 
 article{
+
+.msg{
+	text-align: center;
+		p.notice {
+    color: seagreen;
+}
+
+p.alert {
+    color: orangered;
+}
+}
 
 
 	.product_list {
@@ -98,13 +112,32 @@ article{
 
 }
 
+
+// HOME PAGE STYLE
+
 .welcome{
 	text-align: center;
-	border-bottom: 1px solid lightgray;
-	border-radius: 20px;
+
 	p{
 		line-height: 2;
 		word-spacing: 3px;
 		font-size: 20px;
 	}
+}
+
+
+.popular_list {
+
+
+.popular_products {
+    margin: 5px;
+    border: 1px solid silver;
+    height: calc(100vh / 2.3);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    float:left;
+    width: 22%;
+}
+
 }
