@@ -4,9 +4,10 @@
 - @products.each do |product|
   .product_list
     %h2= link_to product.name, product
+    .post_imgs
+      = image_tag product.images_urls(:card)[0]
     %small.cat
       Category - #{product.category.name}
-    %p= product.desc
-    .post_imgs
-      - product.images_urls(:card).each do |image|
-        = image_tag image
+    %p= truncate(product.desc, length: 75)
+
+
