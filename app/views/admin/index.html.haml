@@ -1,9 +1,15 @@
-%h1 Admin#index
-%h3 Create New Product/Category
+- if current_user.role == 2
+    %h1 Admin#index
+    %h3 Create New Product/Category
+- else
+    %h1 Seller#index
+    %h3 Create New Product
+
 
 %ul
-    %li
-        = link_to('New Category', new_admin_category_path, target: :_blank)
+    - if current_user.role == 2
+        %li
+            = link_to('New Category', new_admin_category_path, target: :_blank)
     %li
         = link_to('New Product', new_admin_product_path, target: :_blank)
 
@@ -20,18 +26,18 @@
             %br
 
 
+- if current_user.role == 2
+    .categories
 
-.categories
-
-    %h3 Manage Categories
-    %ol
-        - @categories.each do | category |
-            %li=category.name
-            = link_to 'Show', admin_category_path(category), target: :_blank
-            = link_to 'Edit', edit_admin_category_path(category), target: :_blank
-            = link_to 'Destroy', admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, target: :_blank
-            %br
-            %br
+        %h3 Manage Categories
+        %ol
+            - @categories.each do | category |
+                %li=category.name
+                = link_to 'Show', admin_category_path(category), target: :_blank
+                = link_to 'Edit', edit_admin_category_path(category), target: :_blank
+                = link_to 'Destroy', admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, target: :_blank
+                %br
+                %br
 
 
 

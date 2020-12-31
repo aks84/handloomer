@@ -3,7 +3,7 @@
 
 <h1> <%= @product.name %> </h1>
 
-<div class="post_imgs">
+<div class="product_imgs">
   <% @product.images_urls(:thumb).each do |mig| %>
   <%= image_tag mig if @product.images.any? %>
 <% end %>
