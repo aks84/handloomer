@@ -1,13 +1,14 @@
-- if current_user.role == 2
+
+- if current_user.admin?
     %h1 Admin#index
     %h3 Create New Product/Category
-- else
+- if current_user.seller?
     %h1 Seller#index
     %h3 Create New Product
 
 
 %ul
-    - if current_user.role == 2
+    - if current_user.admin?
         %li
             = link_to('New Category', new_admin_category_path, target: :_blank)
     %li
@@ -26,7 +27,7 @@
             %br
 
 
-- if current_user.role == 2
+- if current_user.admin?
     .categories
 
         %h3 Manage Categories
