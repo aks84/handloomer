@@ -5,8 +5,9 @@ class CartsController < ApplicationController
 
 	end
 
+
 	def index
-		@cart_items = Cart.find(params[:id].products
+		@crat_items = Cart.find(params[:id].products)
 	end
 
 	def new
