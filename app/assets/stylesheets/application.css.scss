@@ -184,3 +184,23 @@ p.alert {
 		}
 	}
 }
+
+
+.welcome_footer{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin-top: 50px;
+}
+
+.welcome_footer>div{
+
+	flex: 1 1 auto;
+	text-align: center;
+	height: 150px;
+	background-color: #C33C33;
+	border-radius: 5px;
+	margin-right: 5px;
+
+}
+

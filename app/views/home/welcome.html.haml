@@ -16,6 +16,14 @@
         = image_tag product.images_urls(:card)[0]
       %small.cat
         Category - #{product.category.name}
-      %p= truncate(product.desc, length: 75)
+      / %p= truncate(product.desc, length: 150)
 
-      = link_to "- Learn More -", product, class: "contact-btn"
+      / = link_to "- Learn More -", product, class: "contact-btn"
+
+.welcome_footer
+  .footer_wig1
+    %p Footer Widget #1
+  .footer_wig2
+    %p Footer Widget #2
+  .footer_wig3
+    %p Footer Widget #3
