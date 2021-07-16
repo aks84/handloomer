@@ -34,3 +34,9 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+
+# ingone local SLL cert and key
+/localhost.crt
+/localhost.key
+

@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-5.times do
-    Category.create name:Faker::Mountain.name, desc: Faker::Lorem.paragraph(sentence_count: 5)
-end
+# 5.times do
+#     Category.create name:Faker::Mountain.name, desc: Faker::Lorem.paragraph(sentence_count: 5)
+# end
 
-p "categories created"
+# p "categories created"
