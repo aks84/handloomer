@@ -9,7 +9,7 @@
 %h3 Popular Products
 
 .popular_list
-  - @products.each do |product|
+  - Product.all.each do |product|
     .popular_products
       %h2= link_to product.name, product
       .post_imgs
