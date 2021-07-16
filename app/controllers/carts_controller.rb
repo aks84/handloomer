@@ -1,24 +1,24 @@
-class CartsController < ApplicationController
-	before_action :find_user, :new
+# class CartsController < ApplicationController
+# 	before_action :find_user, :new
 
-	def create
+# 	def create
 
-	end
-
-
-	def index
-		@crat_items = Cart.find(params[:id].products)
-	end
-
-	def new
-		@cart = Cart.where user_id: @user_id, product_id: @product
-	end
+# 	end
 
 
-	private
+# 	def index
+# 		@crat_items = Cart.find(params[:id].products)
+# 	end
 
-	def find_user
-		@user_id = current_user.id
-	end
+# 	def new
+# 		@cart = Cart.where user_id: @user_id, product_id: @product
+# 	end
 
-end
+
+# 	private
+
+# 	def find_user
+# 		@user_id = current_user.id
+# 	end
+
+# end
